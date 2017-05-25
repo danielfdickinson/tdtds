@@ -1,0 +1,486 @@
+/* Default settings.  May be overridden in another stylesheet, or if another
+    class applies */
+BODY {
+    /* People seem to like sans-serif better than serif */
+    font-family : "Helvetica", "Arial", sans-serif; 
+    text-align : left;
+    /* A medium bluish background - it is almost the same as the background
+        image I use on some pages */
+    background-color : #99CCFF;
+    /* A dark blue font.  It constrasts well with the background blue even in
+        greyscale */
+    color : #00007F;                
+}
+
+/* Change the colour links to match our colour scheme, and underlined only when hovered over */
+A:link  {
+        /* Blue */
+	color : #0000FF;
+        text-decoration : none;
+}
+
+A:Visited  {
+        /* Purple */
+	color : #800080;
+        text-decoration : none;
+}
+
+A:Active  {
+        /* Red with Black Background, and underlined */
+	color : #FF0000;
+        background-color : #000000;
+        text-decoration : underline;
+}
+
+A:Hover  {
+        /* Red with Black Background, and underlined */
+	color : #FF0000;
+        background-color : #000000;
+        text-decoration : underline;
+}
+
+/* Some browsers aren't too smart about monospacing the following elements
+so we'll suggest ones we know are monospaced and only let the user agent
+(e.g. browser) pick it if the ones we suggest don't exist on the user's system
+*/
+PRE {
+    font-family : "Lucida Console", "Courier New", "Courier", monospace;
+}
+
+CODE {
+    font-family : "Lucida Console", "Courier New", "Courier", monospace;
+}
+
+TT {
+    font-family : "Lucida Console", "Courier New", "Courier", monospace;
+}
+
+SAMP {
+    font-family : "Lucida Console", "Courier New", "Courier", monospace;
+}
+
+/* Default for images, even when they are links, is borderless */
+IMG {
+    border: none;
+}
+
+/* No better spot */
+TABLE.WEBRINGALT {
+    background-color : gray;
+    border-color : red;
+}
+
+/* Default formatting for the page content */
+DIV.CONTENT {
+    /* Matches current formatting block */
+}
+
+/* Styles for Tables of Contents (which is really a type of .CONTENT) */
+
+DIV.TDTDSTOC {
+    font-family : "Times New Roman", "Times", "Roman", "Dutch", serif;
+    font-size : larger;
+}
+
+/* Defines semi-block style paragraphs (initial indent) */
+DIV.SEMIBLOCK P {
+    text-indent : 5%;
+}
+
+/* The following four classes define the formatting of a title with up to
+two levels of sub-titles (which are not the same as sub-headings) */
+DIV.TITLEWITHSUB {
+    text-align : center;
+    color : #000000;
+    font-family : "Times", "Roman", "Dutch", serif;    
+    padding-top : 0em;
+    margin-top : 0em;
+    padding-bottom : 0em;
+    margin-bottom : 0em;
+}
+
+DIV.TITLEWITHSUB H1 {
+    font-size : x-large;
+    padding-top : 0em;
+    margin-top : 0em;
+    padding-bottom : 0em;
+    margin-bottom : 0em;
+}
+
+DIV.TITLEWITHSUB DIV.SUBTITLE1 {
+    font-size : medium;
+    font-weight : bold;
+    font-style : italic;    
+    padding-top : 0em;
+    margin-top : 0em;
+    padding-bottom : 0em;
+    margin-bottom : 0em;
+}
+
+DIV.TITLEWITHSUB DIV.SUBTITLE2 {
+    font-size : small;
+    font-weight : bold;
+    font-style : italic;
+    padding-top : 0em;
+    margin-top : 0em;
+    padding-bottom : 0em;
+    margin-bottom : 0em;
+}
+
+/* For table of contents documents that contain sub-toc's too small for their
+own page */
+.SUBSECTION {
+    margin-top : 3em;
+    margin-bottom : 3em;     
+    border-top : groove;
+    border-top-width : 3px;       
+    border-color : #00007F;
+    padding-top : 1em;
+}
+
+/* Page header : Just breadcrumb and pointer to current version of document */
+DIV.HEADER {    
+    font-family : "Helvetica", "Arial", sans-serif;
+    text-align : left;
+    border : solid 1px;        
+    font-size : small;
+    float : none;
+    background-color : #6699CC;
+    border-width : 2px;
+    border-color : #000000;
+}
+
+DIV.BREADCRUMB {
+    padding : 5px;
+}
+
+SPAN.BREADCRUMBCAPTION {
+    font-weight : bold;
+}
+
+DIV.TOCURRENTVERSION {
+    padding : 5px;
+    border-top : dashed 1px;
+}
+
+DIV.WHYTOCURRENT {
+    float : right;
+    font-size : x-small;
+}
+
+/* The parts of the footer */
+
+DIV.FOOTER {
+    border-top : groove 4px;
+    margin-top : 7px;
+    padding-top : 7px;
+    float : left;
+}
+
+DIV.FOOTERLEFT {
+    float : left;
+}
+
+DIV.FOOTERRIGHT {
+    float : right;
+}
+
+DIV.FOOTERCENTERTOP {
+    margin-left : 0px;   
+    text-align : center;
+}
+
+DIV.FOOTERCENTERBOTTOM { 
+    margin-left : 5px;
+    text-align : center;
+}
+
+DIV.REVISION {
+    text-align : left;
+    font-size : small;
+    font-family : "Times New Roman", "Dutch", "Roman", serif;
+}
+
+/* Instead of specifying float : left for the sidebar we specify the width of
+the content and float it right.  This allows us to put the content first on the
+page, which looks better in non-CSS browsers */
+DIV.CONTENT {
+    float : right;
+    width : 78%;    
+}
+
+H1.PAGETITLE {
+    text-align : center;
+    color : #000000;
+    font-family : "Times New Roman", "Times", "Roman", "Dutch", serif;
+}
+
+/* Likewise Tables of Contents */
+DIV.DFDTOC {
+    float : right;
+    width : 78%;    
+}
+
+/* Sidebar is a single block element of width : 100% - .CONTENT
+   that contains all the boxes with the actual sidebar items */
+DIV.SIDEBAR {
+    font-family : "Helvetica", "Arial", sans-serif;
+    text-align : left;
+    width : 21%
+}
+
+/* All the boxes uses the same format */
+DIV.SIDEBARBOX {
+    background-color : #6699CC;
+    margin-top : 10px;
+    border : solid 2px;
+    border-color : #000000;
+    color : #000000;
+    padding : 5px;
+}
+
+SPAN.NEWSDATE {
+    font-weight : bold;
+}
+
+/* The navigation button images need a border to help 
+   them be more visible, but not so much they distract */
+IMG.NAVBUTTON {
+    border : solid 1px;
+    border-color : #5588BB;
+}
+
+/* Left and right elements in a sidebar box */
+DIV.SIDEBARBOXLEFT {
+    float : left;
+}
+
+DIV.SIDEBARBOXRIGHT {
+    float : none;
+    text-align: right;
+}
+
+.ENTRYERROR {
+    color : red;
+    text-align : center;
+}
+
+.URLSUCCESS {
+    text-align : center;
+}
+
+.URLERROR {
+    color : red;
+    text-align : center;
+}
+
+.MERGEERROR {
+    color : red;
+    text-align : centre;
+}
+
+.MERGESUCCESS {
+    text-align : centre;
+    border : 2px;
+    padding : 2px;
+}
+
+.REMOVEERROR {
+    color : red;
+    text-align : centre;
+}
+
+.REMOVESUCCESS {
+    text-align : centre;
+    border : 2px;
+    padding : 2px;
+}
+
+.VOTEERROR {
+    color : red;
+    text-align : center;
+}
+
+THEAD.CURRENTVOTEHEAD TH {
+    padding-left : 1em;
+    padding-right : 1em;
+}
+
+THEAD.MERGEHEAD TH {
+    padding-left : 1em;
+    padding-right : 1em;
+}
+
+THEAD.REMOVEHEAD TH {
+    padding-left : 1em;
+    padding-right : 1em;
+}
+
+DIV.VOTEBOX {
+    border : inset 2px;
+    text-align : right;
+    vertical-align : center;	
+    margin-left : 1em;
+    margin-top : 1em;
+    padding : 5pt;
+    background-color : silver;
+}
+
+DIV.URLBOX {
+    border : inset 2px;
+    text-align : left;
+    vertical-align : center;	
+    margin-left : 1em;
+    margin-top : 1em;
+    padding : 5pt;
+    background-color : silver;
+}
+
+
+DIV.VOTESONGBOX {
+    width : 100%;
+    text-align : left;
+}
+
+DIV.URLENTRYBOX {
+    width : 100%;
+    text-align : left;
+}
+
+DIV.MERGENTRYBOX {
+    width : 50%;
+    text-align : left;
+}
+
+DIV.REMOVENTRYBOX {
+    width : 50%;
+    text-align : left;
+}
+
+.VOTESONGFIELD {
+    width : 100%;
+}
+
+.URLFIELD {
+    width : 100%;
+}
+
+.MERGEFIELD {
+    width : 100%;
+}
+
+.REMOVEFIELD {
+    width : 100%;
+}
+
+.ENDROUNDSTARTTEXT {
+    text-align : left;
+}
+
+TABLE.APPROVEDVOTETABLE {
+    border : solid;
+    border-collapse : collapse;
+}
+
+TABLE.PENDINGVOTETABLE {
+    border : solid;
+    border-collapse : collapse; 
+}
+
+TABLE.CURRENTVOTETABLE {
+    border : solid;
+    border-collapse : collapse; 
+}
+
+TABLE.MERGETABLE {
+    border : solid;
+    border-collapse : collapse; 
+}
+
+TABLE.REMOVETABLE {
+    border : solid;
+    border-collapse : collapse; 
+}
+
+TR.VOTEHEAD {
+/*    border-bottom : solid; */
+}
+
+TH.VOTEHEADELEMENTS {
+    padding-left : 1em;
+    padding-right : 1em;
+    text-align : left;
+    border : singe 2px;
+}
+
+TH.MERGEHEADELEMENTS {
+    padding-left : 1em;
+    padding-right : 1em;
+    text-align : left;
+    border : singe 2px;
+}
+
+TH.REMOVEHEADELEMENTS {
+    padding-left : 1em;
+    padding-right : 1em;
+    text-align : left;
+    border : singe 2px;
+}
+
+TR.CURRENTVOTEROW {
+/*    border : solid; */
+}
+
+TR.CURRENTMERGEROW {
+/*    border : solid; */
+}
+
+TR.CURRENTREMOVEROW {
+/*    border : solid; */
+}
+
+TD.CURRENTVOTEELEMENT {
+    border : solid 2px;
+    padding-left : 5px;
+    padding-right : 5px;
+/*    border-spacing : 5pt; */
+}
+
+TD.CURRENTMERGEELEMENT {
+    border : solid 2px;
+    padding-left : 5px;
+    padding-right : 5px;
+/*    border-spacing : 5pt; */
+}
+
+TD.CURRENTREMOVEELEMENT {
+    border : solid 2px;
+    padding-left : 5px;
+    padding-right : 5px;
+/*    border-spacing : 5pt; */
+}
+
+TD.CURRENTADMINELEMENT {
+    border : solid 2px;
+    padding : 5px;
+/*    border-spacing : 5pt; */
+}
+
+TH.CURRENTVOTEHEADELEMENTS {
+    padding-left : 1em;
+    padding-right : 1em;
+    text-align : left;
+    border : singe 2px;
+}
+
+TD.OTHERPENDINGELEMENT {
+    border : solid 2px;
+    padding-left : 5px;
+    padding-right : 5px;
+}
+
+TD.OTHERVOTEELEMENT {
+    border : solid 2px;
+    padding-left : 5px;
+    padding-right : 5px;
+}

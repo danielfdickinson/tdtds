@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Login to The Dance That Doesn't Suck</title>
+<link rel="stylesheet" type="text/css"
+href="http://liranan/tdtds/default.css" />
+</head>
+<body onload="if (self != top) top.location = self.location">
+<h1 class="PAGETITLE">Login to<BR>The Dance That Doesn't Suck</h1>
+<div class="CONTENT">
+<!-- tdtds_login_error -->
+<form action="/cgi-bin/tdtds/tdtds.cgi?action=login" method="POST">
+<table align="center">
+<tr><td>Email address</td><td><input name="loginemail" type="text"
+maxlength="255" /></td></tr>
+<tr><td>Password</td><td><input name="loginpassword" type="password"
+maxlength="255" /></td></tr>
+<br>
+<tr><td>&nbsp;</td><td><input name="form_type" type="submit" value="Login" /></td></tr>
+</table>
+</form>
+<p align="center"><small>If you do not yet have a password, you should <a
+href="/cgi-bin/tdtds/tdtds.cgi?action=register&first_use=true">register with this site</a>.  If you have
+forgotten your password, you can <a
+href="/cgi-bin/tdtds/tdtds.cgi?action=reset_password&first_use=true">reset your password</a>.</small>
+</p>
+</div>
+<div class="SIDEBAR">
+	<div class="SIDEBARBOX">
+		<p><span class="NEWSDATE">2005-10-23</span>: Example #1</p>
+	</div>
+</div>
+
+</body>

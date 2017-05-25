@@ -1,0 +1,102 @@
+
+     The Dance That Doesn't Suck: Vote on songs for your dance
+
+     $Id: README,v 1.5 2006/11/06 17:56:15 mornir Exp $
+     Copyright (C) 2006 Daniel Dickinson <cshore@wightman.ca>
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+     02111-1307  USA 
+
+1. INSTALLING
+    The base directory the scripts and templates expect to use is
+    /usr/lib/cgi-bin/tdtds although the scripts can be changed by
+    editing a single setting in a single file (Tdtds/Common.pm).  
+
+    The scripts depend on a Tdtds subdirectory
+    (e.g. /usr/lib/cgi-bin/tdtds/Tdtds) and a templates subdirectory
+    (e.g. /usr/lib/cgi-bin/tdtds/templates) although this too can be
+    changed by editing Common.pm
+
+    The default login page for the site is currently at
+    /var/www/tdtds/index.html, but nothing depends on that location
+    and it could be at /whocares/Timbuktu without issues.
+    The stylesheet is at /var/www/tdtds/css/default.css and changing that
+    requires another edit to Common.pm.
+
+2. TEMPLATE NOTES
+
+    $current_title controls what generate_header uses as the browser title
+    (that is the title that typically appears on the browser's title bar,
+    rather than as part of the page).
+
+    $current_template is the name of the file to use as the body of the page,
+    with some substitutions (as used by generate_page and
+    generate_entry_error_page).
+
+    <!-- tdtds_heading --> is replaced by the value of $current_title in both
+    the header template and the body template.
+
+    <!-- tdtds_error_in_form --> is replaced by the error message for data
+    entry forms (e.g. registration form), in the body template.
+
+    <!-- tdtds_login_error --> is replaced by the error message for data 
+    entry forms (e.g. login page), in the body template.
+
+    <!-- tdtds_current_vote_table --> is replaced by a table of numbers of
+    votes for each approved song+artist
+
+3.  ACTIONS
+
+    Current script 'actions' (action=xxx) are:
+        login
+        register
+        confirm
+        reset_password
+	cast_vote
+	remove_vote
+	add_url
+	logout
+	home
+	
+
+4.  DEPENDENCIES
+
+    Tested with Perl 5.8.4, should work with 5.6 as well.
+
+    In addition to core Perl modules, requires Test::Warn, Data::UUID,
+    and URI::Escape.  Under Debian GNU/Linux 3.1 (Sarge) these are
+    provided by libtest-warn-perl, libossp-uuid-perl, and liburi-perl
+    respectively.
+
+5.  CSS CLASSES IN SCRIPT-GENERATED HTML
+
+    CURRENTVOTEELEMENT (TD elements in current vote table)
+    VOTETABLE (DIV containing approved and pending tables)
+    VOTEHEAD (THEAD element for current vote table)
+    VOTEBODY (TBODY element for current vote table)
+    PAGETITLE (H1 element at beginning of page)
+    PENDINGCOUNT (The sentence telling how many songs are pending approval)
+    APPROVEDVOTETABLE (TABLE for approved songs)
+    PENDINGVOTETABLE (TABLE for songs pending approval for this user)
+    VOTEBOX (contains VOTESONGBOX and VOTEURLBOX)
+    VOTESONGBOX (contains drop-down and textfield for voting on a song)
+    VOTEURLBOX (textfield and title for submitting a link for a song)
+    VOTEHEADELEMENTS (TH elements of a VOTEHEAD for current vote tables)
+    PENDINGVOTETABLE
+    CURRENTVOTETABLE
+    APPROVEDVOTETABLE
+    CURRENTVOTEROW
+    CURRENTVOTEELEMENT
+    CURRENTVOTEHEADELEMENTS

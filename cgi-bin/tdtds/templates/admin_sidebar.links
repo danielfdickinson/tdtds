@@ -1,0 +1,6 @@
+<a href="<!-- script_url -->?action=admin">Approve Songs<a><br>
+<a href="<!-- script_url -->?action=approve_links">Approve Links</a><br>
+<a href="<!-- script_url -->?action=merge_songs">Merge Songs</a><br>
+<a href="<!-- script_url -->?action=remove_songs">Remove Songs</a><br>
+<a href="<!-- script_url -->?action=misc_admin">Miscellaneous Admin Tasks</a><br>
+
